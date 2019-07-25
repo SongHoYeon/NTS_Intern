@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>homework3</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="wrap">
+        <form action="" method="GET">
+            <main class="page_search">
+                <div class="container_content">
+                    <div class="content_field">
+                        <div class="content_title">검색어</div>
+                        <div class="content">
+                            <div class="search_vertical_frame">
+                                <input type="radio" id="search_code_number" name="search_code" class="radio_btn blind"
+                                    checked />
+                                <label for="search_code_number" class="search_code_label">원상품번호</label>
+                                <input type="radio" id="search_code_sellernumber" name="search_code"
+                                    class="radio_btn blind" />
+                                <label for="search_code_sellernumber" class="search_code_label">판매자상품코드</label>
+                            </div>
+                            <div class="search_vertical_frame">
+                                <textarea id="search_code_text" class="serach_multisearch"
+                                    placeholder="복수 검색&#10;(enter 또는 &quot;/&quot; 로 구분)" cols="20" rows="3"></textarea>
+                            </div>
+                            <div class="search_vertical_frame">
+                                <div class="search_name_element">
+                                    <label for="search_name_product" class="seatch_name_title">상품명</label>
+                                    <input type="text" id="search_name_product" class="search_name_textbox">
+                                </div>
+                                <div class="search_name_element">
+                                    <label for="search_name_model" class="seatch_name_title">모델명</label>
+                                    <input type="text" id="search_name_model" class="search_name_textbox">
+                                </div>
+                            </div>
+                            <div class="search_vertical_frame">
+                                <div class="search_name_element">
+                                    <label for="search_name_company" class="seatch_name_title">제조사명</label>
+                                    <input type="text" id="search_name_company" class="search_name_textbox">
+                                </div>
+                                <div class="search_name_element">
+                                    <label for="search_name_brand" class="seatch_name_title">브랜드명</label>
+                                    <input type="text" id="search_name_brand" class="search_name_textbox">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_field">
+                        <div class="content_title">판매상태</div>
+                        <div class="content">
+                            <div class="state_element">
+                                <input type="checkbox" name="state_check" id="state_all"
+                                    class="check_btn check_state_btn blind">
+                                <label for="state_all" class="state_label">전체</label>
+                            </div>
+                            <div class="state_element">
+                                <input type="checkbox" name="state_check" id="state_wait"
+                                    class="check_btn check_state_btn blind">
+                                <label for="state_wait" class="state_label">판매대기</label>
+                            </div>
+                            <div class="state_element">
+                                <input type="checkbox" name="state_check" id="state_sell"
+                                    class="check_btn check_state_btn blind">
+                                <label for="state_sell" class="state_label">판매중</label>
+                            </div>
+                            <div class="state_element">
+                                <input type="checkbox" name="state_check" id="state_soldout"
+                                    class="check_btn check_state_btn blind">
+                                <label for="state_soldout" class="state_label">품절</label>
+                            </div>
+                            <div class="state_element">
+                                <input type="checkbox" name="state_check" id="state_approve_wait"
+                                    class="check_btn check_state_btn blind">
+                                <label for="state_approve_wait" class="state_label">승인대기</label>
+                            </div>
+                            <div class="state_element">
+                                <input type="checkbox" name="state_check" id="state_stop"
+                                    class="check_btn check_state_btn blind">
+                                <label for="state_stop" class="state_label">판매중지</label>
+                            </div>
+                            <div class="state_element">
+                                <input type="checkbox" name="state_check" id="state_end"
+                                    class="check_btn check_state_btn blind">
+                                <label for="state_end" class="state_label">판매종료</label>
+                            </div>
+                            <div class="state_element">
+                                <input type="checkbox" name="state_check" id="state_ban"
+                                    class="check_btn check_state_btn blind">
+                                <label for="state_ban" class="state_label">판매금지</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_field">
+                        <div class="content_title">카테고리</div>
+                        <div class="content">
+                            <div class="selectbox">
+                                <span class="selected_value">대분류</span>
+                                <ul class="select_options">
+                                    <li>
+                                        <div class="select_option">대분류1</div>
+                                    </li>
+                                    <li>
+                                        <div class="select_option">대분류2</div>
+                                    </li>
+                                    <li>
+                                        <div class="select_option">대분류3</div>
+                                    </li>
+                                </ul>
+                                <!-- <div class=""></div> -->
+                                <!-- <select name="" id="category_big" class="selectbox">
+                                    <option value="">대분류</option>
+                                    <option value="">대분류_Temp_1</option>
+                                    <option value="">대분류_Temp_2</option>
+                                </select> -->
+                            </div>
+                            <div class="selectbox">
+                                <!-- <select name="" id="category_mid" class="selectbox">
+                                    <option value="">중분류</option>
+                                    <option value="">중분류_Temp_1</option>
+                                    <option value="">중분류_Temp_2</option>
+                                </select> -->
+                            </div>
+                            <div class="selectbox">
+                                <!-- <select name="" id="category_small" class="selectbox">
+                                    <option value="">소분류</option>
+                                    <option value="">소분류_Temp_1</option>
+                                    <option value="">소분류_Temp_2</option>
+                                </select> -->
+                            </div>
+                            <div class="selectbox">
+                                <!-- <select name="" id="category_xsmall" class="selectbox">
+                                    <option value="">세분류</option>
+                                    <option value="">세분류_Temp_1</option>
+                                    <option value="">세분류_Temp_2</option>
+                                </select> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_field">
+                        <div class="content_title">채널</div>
+                        <div class="content">
+                            <div class="channel_element">
+                                <input type="checkbox" name="channel_check" id="channel_all" class="check_btn blind">
+                                <label for="channel_all" class="channel_label">전체</label>
+                            </div>
+                            <div class="channel_element">
+                                <input type="checkbox" name="channel_check" id="channel_farm" class="check_btn blind">
+                                <label for="channel_farm" class="channel_label">스토어팜</label>
+                            </div>
+                            <div class="channel_element">
+                                <input type="checkbox" name="channel_check" id="channel_windo" class="check_btn blind">
+                                <label for="channel_windo" class="channel_label">윈도</label>
+                            </div>
+                            <div class="channel_element">
+                                <input type="checkbox" name="channel_check" id="channel_band" class="check_btn blind">
+                                <label for="channel_band" class="channel_label">밴드기프트샵</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_field">
+                        <div class="content_title">결제여부</div>
+                        <div class="content">
+                            <div class="payment_element">
+                                <input type="radio" id="payment_all" name="payment" class="radio_btn blind" checked />
+                                <label for="payment_all" class="payment_label">전체</label>
+                            </div>
+                            <div class="payment_element">
+                                <input type="radio" id="payment_pay" name="payment" class="radio_btn blind" />
+                                <label for="payment_pay" class="payment_label">결제상품(pay)</label>
+                            </div>
+                            <div class="payment_element">
+                                <input type="radio" id="payment_nonpay" name="payment" class="radio_btn blind" />
+                                <label for="payment_nonpay" class="payment_label">무결제상품(Non-pay)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_field">
+                        <div class="content_title">기간</div>
+                        <div class="content">
+                            <div class="date_element_selectbox">
+                                <select name="" id="date_xsmall" class="selectbox">
+                                    <option value="">상품등록일</option>
+                                    <option value="">판매시작일</option>
+                                    <option value="">판매종료일</option>
+                                    <option value="">최종수정일</option>
+                                </select>
+                            </div>
+                            <div class="date_element">
+                                <div class="date_btn">
+                                    <input type="radio" id="date_btn_today" name="date_select"
+                                        class="radio_date_btn blind" />
+                                    <label for="date_btn_today" class="date_select_label">오늘</label>
+                                </div>
+                                <div class="date_btn">
+                                    <input type="radio" id="date_btn_week" name="date_select"
+                                        class="radio_date_btn blind" />
+                                    <label for="date_btn_week" class="date_select_label">1주일</label>
+                                </div>
+                                <div class="date_btn">
+                                    <input type="radio" id="date_btn_month" name="date_select"
+                                        class="radio_date_btn blind" />
+                                    <label for="date_btn_month" class="date_select_label">1개월</label>
+                                </div>
+                                <div class="date_btn">
+                                    <input type="radio" id="date_btn_month_three" name="date_select"
+                                        class="radio_date_btn blind" />
+                                    <label for="date_btn_month_three" class="date_select_label">3개월</label>
+                                </div>
+                                <div class="date_btn">
+                                    <input type="radio" id="date_btn_month_six" name="date_select"
+                                        class="radio_date_btn blind" />
+                                    <label for="date_btn_month_six" class="date_select_label">6개월</label>
+                                </div>
+                                <div class="date_btn">
+                                    <input type="radio" id="date_btn_year" name="date_select"
+                                        class="radio_date_btn blind" />
+                                    <label for="date_btn_year" class="date_select_label">1년</label>
+                                </div>
+                            </div>
+                            <div class="date_element">
+                                <div class="date_picker">
+                                    <input type="date" class="date_input">
+                                </div>
+
+                                <span>~</span>
+                                <input type="date" class="date_input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container_btn">
+                    <button type="reset" class="btn btn_reset">초기화</button>
+                    <button type="submit" class="btn btn_submit">검색</button>
+                </div>
+            </main>
+        </form>
+    </div>
+</body>
+
+</html>

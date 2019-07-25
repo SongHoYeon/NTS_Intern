@@ -1,0 +1,328 @@
+@charset "UTF-8";
+
+html,
+body {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "나눔 고딕", NanumGothic, "돋움", Dotum, sans-serif;
+}
+
+.blind {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    font-size: 0;
+}
+
+.wrap {
+    padding: 10px 10px 30px 10px;
+    background-color: #edf0fd;
+}
+
+.page_search {
+    border: 1px solid #ccc;
+}
+
+.container_content {
+    padding: 10px;
+    background-color: #f8f9fd;
+}
+
+.content_field {
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content_title {
+    float: left;
+    width: 225px;
+    font-size: 15px;
+    color: #8f8c99;
+}
+
+.content {
+    overflow: hidden;
+    font-size: 13px;
+    min-width: 190px;
+}
+
+.content::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.search_vertical_frame{
+    float: left;
+    margin-right: 20px;
+}
+
+.search_code_label{
+    display: block;
+    line-height: 25px;
+}
+
+.radio_btn + label::before {
+    background: url(htmlcss_advance_form/ico_radio_off.png) no-repeat 0 0;
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    content: '';
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.radio_btn:checked + label::before{
+    background-image: url(htmlcss_advance_form/ico_radio_on.png);
+}
+
+.serach_multisearch{
+    border: 1px solid #ddd;
+    padding: 5px;
+    font-size: 15px;
+    color: #acafb9;
+}
+
+.search_name_element{
+    margin-bottom: 10px;
+}
+
+.seatch_name_title{
+    display: inline-block;
+    vertical-align: top;
+    line-height: 20px;
+    width: 50px;
+}
+
+.search_name_textbox{
+    vertical-align: top;
+    height: 20px;
+}
+
+.state_element{
+    float: left;
+    margin: 0 20px 10px 0;
+    min-width: 100px;
+}
+
+.state_label{
+    display: block;
+}
+
+.check_btn + label::before {
+    background: url(htmlcss_advance_form/ico_checkbox_off.png) no-repeat 0 0;
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    content: '';
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.check_btn:checked + label::before{
+    background-image: url(htmlcss_advance_form/ico_checkbox_on.png);
+}
+
+.selectbox{
+    float: left;
+    position: relative;
+    min-width: 150px;
+    height: 30px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 0 10px;
+}
+
+.selected_value{
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.select_options{
+    position: absolute;
+    background-color: red;
+    top: 10px;
+    height: 100px;
+    left: 0;
+}
+
+/* .selectbox{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    padding: 0 10px;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+} */
+
+.selectbox::after{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: url(htmlcss_advance_form/ico_arw_off.png) no-repeat 0 0;
+    background-size: 10px;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    content: '';
+}
+
+.channel_element{
+    float: left;
+    margin: 0 20px 10px 0;
+    min-width: 100px;
+}
+
+.payment_element{
+    float: left;
+    margin: 0 20px 10px 0;
+    min-width: 100px;
+}
+
+.payment_label{
+    display: block;
+}
+
+.date_element_selectbox{
+    position: relative;
+    float: left;
+    margin: 0 20px 10px 0;
+    width: 100px;
+    height: 25px;
+}
+
+.date_element_selectbox::after{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: url(htmlcss_advance_form/ico_arw_off.png) no-repeat 0 0;
+    background-size: 10px;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    content: '';
+}
+
+.date_element{
+    float: left;
+    margin: 0 20px 10px 0;
+}
+
+.date_btn{
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+    margin-left: -5px;
+    
+}
+
+.radio_date_btn:checked + .date_select_label{
+    border-color: #00c930;
+    color: #00c95c;
+}
+
+.radio_date_btn + .date_select_label{
+    display: block;
+}
+
+.date_picker{
+    margin: 0 5px 5px 0;
+    position: relative;
+}
+
+.date_input{
+    height: 23px;
+    float: left;
+
+    /* padding-right: 25px; */
+}
+
+/* .date_input:hover{
+    border: 0;
+}
+.date_input:focus{
+    border: 1px solid #00c930;
+}
+.date_input:active{
+    border: 1px solid #00c930;
+} */
+
+
+.date_input::-webkit-clear-button,
+.date_input::-webkit-inner-spin-button
+{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.date_input::-webkit-calendar-picker-indicator{
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+
+
+.date_picker::after{
+    content: '';
+    float: left;
+    width: 25px;
+    height: 25px;
+    border:  1px solid #ccc;    
+    background: url(htmlcss_advance_form/btn_calendar.png) no-repeat 0 0;
+    background-size: 15px;
+    background-position: center;
+    z-index: 0;
+    /* position: absolute;
+    top: 0px;
+    right: 7px; */
+}
+
+
+.date_btn:focus{
+    border: 1px solid green;    
+}
+
+.container_btn {
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    padding: 10px 0 30px;
+}
+
+.container_btn .btn{
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+}
+.btn_reset {
+    background-color: #fff;
+}
+
+.btn_submit {
+    color: #fff;
+    border-color: #00af2a;
+    background-color: #00c830;
+}
