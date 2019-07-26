@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 320px) {
+    /* and (max-width: 767px)  */
+    html, body{
+        margin: 0;
+        height: 100%;
+    }
+
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+
+    .blind{
+        position: absolute;
+        clip: rect(0 0 0 0);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        margin: -1px;
+    }
+
+    .wrap{
+        position: relative;
+        background-color: #e8ecef;
+        height: 100%;
+    }
+
+    .btn_back{
+        position: absolute;
+        margin: 15px;
+        width: 21px;
+        height: 18px;
+        background: url(images/htmlcss_advance_sprite.png) no-repeat 0 0;
+        background-size: 140px;
+    }
+
+    .content + .content{
+        margin-top: 8px;
+    }
+
+    .place_img_field{
+        position: relative;
+    }
+
+    .place_img{
+        vertical-align: top;
+        width: 100%;
+    }
+
+    .feture{
+        padding: 19px 18px;
+        background: #fff;
+    }
+
+    .place_name{
+        display: block;
+        color: #242424;
+        font-size: 21px;
+        line-height: 22px;
+        font-weight: normal;
+        text-align: center;
+    }
+    
+    .place_category{
+        display: inline-block;
+        vertical-align: top;
+        margin: 3px 0 0 6px;
+        font-style: normal;
+        font-size: 15px;
+        line-height: 16px;
+        color: #8f8f8f;
+    }
+
+    .place_blog_review_link{
+        display: block;
+        text-align: center;
+        margin-top: 14px;
+        font-size: 15px;
+        line-height: 16px;
+        color: #0068c3;
+    }
+}
