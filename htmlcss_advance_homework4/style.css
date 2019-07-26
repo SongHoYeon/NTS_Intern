@@ -84,4 +84,28 @@
         line-height: 16px;
         color: #0068c3;
     }
+
+    .place_btns{
+        margin-top: 14px;
+        text-align: center;
+    }
+    .place_btns .btn{
+        display: inline-block;
+        border: 1px solid #3386ff;
+        padding: 10px 25px;
+        border-radius: 20px;
+    }
+
+    .place_btns .btn + .btn{
+        margin-left: 7px;
+    }
+
+    .place_btns .btn.start{
+        color: #3386ff;
+    }
+
+    .place_btns .btn.end{
+        background-color: #3386ff;
+        color: #fff;
+    }
 }
