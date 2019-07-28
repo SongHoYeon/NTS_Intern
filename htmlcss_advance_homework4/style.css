@@ -2,17 +2,28 @@
 
 @media screen and (min-width: 320px) {
     /* and (max-width: 767px)  */
-    html, body{
+    html,
+    body{
         margin: 0;
-        height: 100%;
     }
 
-    a{
+    p{
+        margin: 0;
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    a {
+        display: block;
         text-decoration: none;
         color: #000;
     }
 
-    .blind{
+    .blind {
         position: absolute;
         clip: rect(0 0 0 0);
         top: 0;
@@ -24,13 +35,12 @@
         margin: -1px;
     }
 
-    .wrap{
+    .wrap {
         position: relative;
         background-color: #e8ecef;
-        height: 100%;
     }
 
-    .btn_back{
+    .btn_back {
         position: absolute;
         margin: 15px;
         width: 21px;
@@ -39,25 +49,29 @@
         background-size: 140px;
     }
 
-    .content + .content{
+    .content{
+        background: #fff;
+    }
+
+    .content + .content {
         margin-top: 8px;
     }
 
-    .place_img_field{
+    .place_img_field {
         position: relative;
     }
 
-    .place_img{
+    .place_img {
         vertical-align: top;
         width: 100%;
     }
 
-    .feture{
+    .feture {
         padding: 19px 18px;
-        background: #fff;
+        font-size: 15px;
     }
 
-    .place_name{
+    .place_name {
         display: block;
         color: #242424;
         font-size: 21px;
@@ -65,8 +79,8 @@
         font-weight: normal;
         text-align: center;
     }
-    
-    .place_category{
+
+    .place_category {
         display: inline-block;
         vertical-align: top;
         margin: 3px 0 0 6px;
@@ -76,36 +90,440 @@
         color: #8f8f8f;
     }
 
-    .place_blog_review_link{
-        display: block;
+    .place_blog_review_link {
         text-align: center;
         margin-top: 14px;
-        font-size: 15px;
         line-height: 16px;
         color: #0068c3;
     }
 
-    .place_btns{
+    .place_btns {
         margin-top: 14px;
         text-align: center;
     }
-    .place_btns .btn{
+
+    .place_btns .btn {
         display: inline-block;
+        vertical-align: top;
         border: 1px solid #3386ff;
         padding: 10px 25px;
         border-radius: 20px;
     }
 
-    .place_btns .btn + .btn{
+    .place_btns .btn + .btn {
         margin-left: 7px;
     }
 
-    .place_btns .btn.start{
+    .place_btns .btn.start {
         color: #3386ff;
     }
 
-    .place_btns .btn.end{
+    .place_btns .btn.end {
         background-color: #3386ff;
         color: #fff;
+    }
+
+    .place_func{
+        margin-top: 21px;
+        padding: 15px 0 0;
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        border-top: 1px solid #efefef;
+    }
+
+    .place_func .btn{
+        display: table-cell;
+        text-align: center;
+        vertical-align: top;
+    }
+
+    .place_func .btn + .btn{
+        border-left: 1px solid #efefef;
+    }
+
+    .place_func .btn:before{
+        content: '';
+        width: 20px;
+        height: 20px;
+        display: block;
+        margin: 0 auto 5px;
+    }
+
+    .place_func .btn.call:before{
+        background: url(images/htmlcss_advance_sprite.png) no-repeat -30px 0;
+        background-size: 140px;
+    }
+
+    .place_func .btn.save:before{
+        background: url(images/htmlcss_advance_sprite.png) no-repeat -60px 0;
+        background-size: 140px;
+    }
+
+    .place_func .btn.navi:before{
+        background: url(images/htmlcss_advance_sprite.png) no-repeat -90px 0;
+        background-size: 140px;
+    }
+
+    .place_func .btn.share:before{
+        background: url(images/htmlcss_advance_sprite.png) no-repeat -120px 0;
+        background-size: 140px;
+    }
+
+    .place_func .label_btn{
+        font-size: 14px;
+        color: #424242;
+    }
+
+    .info_tab{
+        display: block;
+        height: 45px;
+        padding-left: 25px;
+        border-bottom: 1px solid #efefef;
+    }
+
+    .info_tab:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .info_tab .element{
+        float: left;
+    }
+
+    .info_tab .element.selected{
+        border-bottom: 2px solid #03c75a;
+    }
+
+    .info_tab .element.selected .subject{
+        color: #03c75a;   
+        font-weight: bold;
+    }
+
+    .info_tab .element + .element{
+        margin-left: 19px;
+    }
+
+    .info_tab .subject{
+        font-size: 16px;
+        line-height: 44px;
+        padding: 0 5px;
+        color: #242424;
+    }
+
+    .feture.info{
+        line-height: 22px;
+        color: #424242;
+    }
+
+    .feture.info .info_simple{
+        padding: 0 0 10px 40px;
+    }
+
+    .feture.info .info_simple + .info_simple{
+        padding-top: 10px;
+        border-top: 1px solid #efefef;
+    }
+
+    .feture.info .info_simple:before{
+        content: '';
+        float: left;
+        margin-left: -40px;
+        width: 16px;
+        height: 18px;
+    }
+
+    .feture.info .info_simple.place:before{
+        background: url(images/htmlcss_advance_sprite.png) no-repeat 0 -30px;
+        background-size: 140px;
+    }
+
+    .feture.info .info_simple:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .simple_address{
+        font-style: normal;
+        display: block;
+    }
+
+    .feture.info .info_simple.place .btns{
+        margin-top: 5px;
+    }
+
+    .feture.info .info_simple.place .btns .btn{
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .feture.info .info_simple.place .btns .btn:not(:last-child):after{
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 10px;
+        background-color: #e0e0e0;
+        width: 3px;
+        height: 3px;
+        margin: 8px 5px 0;
+    }
+
+    .feture.info .info_simple.place .btns .btn:before{
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        margin: 4px 3px 0 0;
+        width: 12px;
+        height: 13px;
+    }
+
+    .feture.info .info_simple.place .btns .btn.num:before{
+        background: url(images/htmlcss_advance_sprite.png) no-repeat 0 -59px;
+        background-size: 140px;
+    }
+
+    .feture.info .info_simple.place .btns .btn.copy:before{
+        background: url(images/htmlcss_advance_sprite.png) no-repeat -30px -59px;
+        background-size: 140px;
+    }
+
+    .feture.info .info_simple.place .btns .btn.map:before{
+        background: url(images/htmlcss_advance_sprite.png) no-repeat -60px -59px;
+        background-size: 140px;
+    }
+
+    .feture.info .info_simple.place .btns .btn.navi:before{
+        background: url(images/htmlcss_advance_sprite.png) no-repeat -90px -59px;
+        background-size: 140px;
+    }
+
+    .feture.info .info_simple.place .btns .label{
+        color: #03c75a;
+    }
+
+    .feture.info .info_simple.working_time:before{
+        background: url(images/htmlcss_advance_sprite.png) no-repeat -30px -30px;
+        background-size: 140px;
+    }
+
+    .feture.info .info_simple.working_time .time_info:after{
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 10px;
+        background-color: #e0e0e0;
+        margin: 8px 6px 0 10px;
+        width: 3px;
+        height: 3px;
+    }
+
+    .feture.info .info_simple.website:before{
+        background: url(images/htmlcss_advance_sprite.png) no-repeat -60px -30px;
+        background-size: 140px;
+    }
+
+    .feture.info .info_simple.website .facebook_url{
+        font-style: normal;
+        display: block;
+        color: #03c75a;
+    }
+
+    .feture.info .info_simple.website .websites{
+        margin-top: 5px;
+    }
+
+    .feture.info .info_simple.website .websites .site{
+        display: inline-block;
+        vertical-align: top;
+        color: #0068c3;
+    }
+
+    .feture.info .info_simple.website .websites .site:not(:last-child):after{
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 10px;
+        background-color: #e0e0e0;
+        width: 3px;
+        height: 3px;
+        margin: 8px 6px 0 10px;
+    }
+    
+    .feture.info .info_simple.service:before{
+        background: url(images/htmlcss_advance_sprite.png) no-repeat -90px -30px;
+        background-size: 140px;
+    }
+
+    .feture.info .info_simple.desc:before{
+        background: url(images/htmlcss_advance_sprite.png) no-repeat -90px -30px;
+        background-size: 140px;
+    }
+
+    .feture.info .info_simple.desc .text{
+        display: -webkit-box;
+        max-height: 66px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+    }
+
+    .review_head{
+        padding: 15px;
+    }
+
+    .review_head .title{
+        font-size: 17px;
+        line-height: 18px;
+        color: #242424;
+        display: block;
+    }
+
+    .review_head .title .count{
+        color: #03c75a;
+    }
+
+    .review_head .info{
+        display: block;
+        margin-top: 10px;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 15px;
+        color: #8f8f8f;
+    }
+
+    .review_star{
+        position: relative;
+        padding: 25px 0 28px 0;
+        border-width: 1px;
+        border-style: solid none;
+        border-color: #efefef;
+        text-align: center;
+    }
+    
+    .review_star .count{
+        font-size: 25px;
+        line-height: 26px;
+        color: #242424;
+    }
+
+    .review_star .count .max{
+        font-weight: normal;
+    }
+    
+    .review_star:after{
+        content: '';
+        display: inline-block;
+        width: 112px;
+        height: 19px;
+        margin-left: 5px;
+        background: url(images/htmlcss_advance_sprite.png) no-repeat 0 -80px;
+        background-size: 140px;
+    }
+
+    .review_star:before{
+        position: absolute;
+        content: '';
+        width: 112px;
+        height: 19px;
+        top: 25px;
+        left: 200px;
+        background: url(images/htmlcss_advance_sprite.png) no-repeat 0 -100px;
+        background-size: 140px;
+        clip: rect( 0, 102px, 19px, 0 );
+    }
+
+    .review_more_btn{
+        display: block;
+        font-size: 16px;
+        line-height: 50px;
+        color: #424242;
+        text-align: center;
+        background-color: #f1f5f7;
+    }
+
+    .review_container{
+        padding: 18px;
+    }
+
+    .review_container .element{
+        display: block;
+        margin-bottom: 19px;
+    }
+
+    .review_container .element:after{
+        display: block;
+        content: '';
+        clear: both;
+    }
+
+    .review_container .element + .element{
+        border-top: 1px solid #ccc;
+        padding-top: 18px;
+    }
+
+    .review_container .element:before{
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        width: 14px;
+        height: 14px;
+        background: url(images/htmlcss_advance_sprite.png) no-repeat -120px -60px;
+        background-size: 140px;
+    }
+
+    .review_container .element .count{
+        font-size: 15px;
+        line-height: 16px;
+        color: #242424;
+    }
+
+    .review_container .element .count .max{
+        font-weight: normal;
+        color: #8f8f8f;
+    }
+
+    .review_container .element .desc{
+        margin-top: 9px;
+        display: -webkit-box;
+        line-height: 22px;
+        max-height: 44px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    .review_container .element .img{
+        float: right;
+        margin: 1px 0 1px 16px;
+        vertical-align: top;
+    }
+
+    .review_container .element .user_id{
+        font-size: 14px;
+        color: #666;
+    }
+
+    .review_container .element .visit_date{
+        border-left: 1px solid #ccc;
+        font-size: 14px;
+        color: #8f8f8f;
+        padding-left: 10px;
+        margin: 6px 0 0 10px;
+        display: inline-block;
+    }
+
+    .review_more_btn:after{
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        margin: 17px 0 0 10px;
+        width: 15px;
+        height: 13px;
+        background: url(images/htmlcss_advance_sprite.png) no-repeat 0 -130px;
+        background-size: 140px;
     }
 }

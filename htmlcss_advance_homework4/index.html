@@ -2,10 +2,10 @@
 <html lang="ko">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
-    <title>상세 설명 : 네이버지도</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1" />
+    <title>상세지도 : 네이버지도</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -15,7 +15,7 @@
             <span class="blind">뒤로가기</span>
         </a>
         <div class="content">
-            <img src="images/emart_img.jpeg" alt="장소 사진" class="place_img">
+            <img src="images/emart_img.jpeg" alt="장소 사진" class="place_img" />
             <div class="feture">
                 <strong class="place_name">이마트 트레이더스 위례점<cite class="place_category">수퍼, 마트</cite></strong>
                 <a href="#" class="place_blog_review_link">
@@ -24,16 +24,128 @@
                 <div class="place_btns">
                     <a href="#" class="btn start">
                         <span class="blind">길찾기</span>
-                        출발
-                    </a><a href="#" class="btn end">
+                        출발 </a><a href="#" class="btn end">
                         <span class="blind">길찾기</span>
                         도착
                     </a>
                 </div>
+                <div class="place_func">
+                    <a href="#" class="btn call">
+                        <span class="label_btn">전화</span>
+                    </a>
+                    <a href="#" class="btn save">
+                        <span class="label_btn">저장하기</span>
+                    </a>
+                    <a href="#" class="btn navi">
+                        <span class="label_btn">네비게이션 </span>
+                    </a>
+                    <a href="#" class="btn share">
+                        <span class="label_btn">공유</span>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="content"></div>
-        <div class="content"></div>
+        <div class="content">
+            <ul class="info_tab">
+                <!-- [D] 선택중인 탭에 'selected' 클래스 넣어주시면 됩니다. -->
+                <li class="element selected">
+                    <a href="#" class="subject">홈</a>
+                </li>
+                <li class="element">
+                    <a href="#review_head" class="subject">리뷰</a>
+                </li>
+                <li class="element">
+                    <a href="#" class="subject">사진</a>
+                </li>
+                <li class="element">
+                    <a href="#" class="subject">주변 가볼만한 곳</a>
+                </li>
+            </ul>
+            <div class="feture info">
+                <div class="info_simple place">
+                    <address class="simple_address">경기 하남시 위례대로 200</address>
+                    <div class="btns num">
+                        <a href="#" class="btn num">
+                            <span class="label">지번</span>
+                        </a>
+                        <a href="#" class="btn copy">
+                            <span class="label">복사</span>
+                        </a>
+                        <a href="#" class="btn map">
+                            <span class="label">지도</span>
+                        </a>
+                        <a href="#" class="btn navi">
+                            <span class="label">네비게이션</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="info_simple working_time">
+                    <strong class="time_info">영업중</strong>
+                    <span>매일 10:00 ~ 23:00</span>
+                </div>
+                <div class="info_simple website">
+                    <a href="https://www.facebook.com/traderswirye"><cite
+                            class="facebook_url">https://www.facebook.com/traderswirye</cite>
+                        <span class="blind">페이스북 바로가기</span>
+                    </a>
+                    <div class="websites">
+                        <a href="#" class="site">웹사이트<span class="blind">바로가기</span></a>
+                        <a href="#" class="site">인스타그램<span class="blind">바로가기</span></a>
+                        <a href="#" class="site">블로그<span class="blind">바로가기</span></a>
+                    </div>
+                </div>
+                <div class="info_simple service">
+                    <span>창고형 매장, 무료주차</span>
+                </div>
+                <div class="info_simple desc">
+                    <span class="text">쇼핑, 레저, 힐링이 한곳에서 이뤄지는 쇼핑 테마파크가 열립니다. 아침부터 저녁까지 가족과 친구들이 함께 쇼핑하고, 맛있는 음식과 레저를 즐기고,
+                        편히 쉴
+                        [임시임시임시임시임시임시임시임시]
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="review_head" id="review_head">
+                <strong class="title">리뷰 <span class="count">3354</span>
+                    <span class="blind">개</span>
+                </strong>
+                <em class="info">네이버 예약을 통해 실제 방문한 이용자가 남긴 평가입니다.</em>
+            </div>
+            <div class="review_star">
+                <strong class="count">4.5<span class="blind">점</span><span class="max"> / 5<span
+                            class="blind">만점</span></span></strong>
+            </div>
+            <div class="review_container">
+                <a href="#" class="element">
+                    <span class="blind">리뷰 상세보기 링크</span>
+                    <strong class="count">4.6<span class="blind">점</span><span class="max"> / 5<span
+                                class="blind">만점</span></span></strong>
+                    <img src="http://placehold.it/100x100" width="100" height="100" alt="리뷰 사진" class="img">
+                    <p class="desc">음식도좋았고 시간을 뒤로미뤘는데도 친절이 응해주셨습니다. 스테이크는 너 [임시임시임시임시]</p>
+                    <span class="user_id">ade****</span>
+                    <span class="visit_date">2018.03.05 방문</span>
+                </a>
+                <a href="#" class="element">
+                    <span class="blind">리뷰 상세보기 링크</span>
+                    <strong class="count">4.6<span class="blind">점</span><span class="max"> / 5<span
+                                class="blind">만점</span></span></strong>
+                    <p class="desc">별로였어오. 맛도없고 서비스도 친절하지 않아서 기분만 상하고왔네요..</p>
+                    <span class="user_id">nali***</span>
+                    <span class="visit_date">2018.03.05 방문</span>
+                </a>
+                <a href="#" class="element">
+                    <span class="blind">리뷰 상세보기 링크</span>
+                    <strong class="count">4.6<span class="blind">점</span><span class="max"> / 5<span
+                                class="blind">만점</span></span></strong>
+                    <img src="http://placehold.it/100x100" width="100" height="100" alt="리뷰 사진" class="img">
+                    <p class="desc">오레노 감튀 너무 바삭하고 맛있어요. 항상 배뻥하고 가는 식당이에요~^^</p>
+                    <span class="user_id">man***</span>
+                    <span class="visit_date">2018.03.05 방문</span>
+                </a>
+            </div>
+            <a href="#" class="review_more_btn">리뷰 더보기</a>
+        </div>
     </div>
 </body>
 
