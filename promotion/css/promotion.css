@@ -78,17 +78,18 @@ a{
     height: 750px;
 }
 
+.invite .bg_pivot{
+    max-width: 1920px;
+}
+
 .invite .bg{
     max-width: 1920px;
 }
 
 .section .bg{
-    content: '';
-    display: inline-block;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     height: 100%;
-    width: 100%;
 }
 
 .invite .bg{
@@ -126,7 +127,7 @@ a{
 }
 
 .store .list{
-    margin-top: 300px;
+    padding-top: 300px;
 }
 
 .store .list:after{
