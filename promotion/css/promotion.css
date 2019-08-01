@@ -142,30 +142,72 @@ a{
     margin-right: 20px
 }
 
-.store .element .link{
+.store .link{
+    position: relative;
     display: block;
     height: 230px;
 }
 
-.store .element .link .img{
+.store .info_sale{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(96, 132, 2, 0.9);
+    color: #fff;
+    text-align: center;
+}
+
+.store .info_sale .percent{
+    display: block;
+    font-size: 65px;
+    margin-top: 60px;
+}
+
+.store .info_sale .time{
+    font-size: 20px;
+}
+
+.store .link:hover .info_sale,
+.store .link:focus .info_sale{
+    display: block;
+}
+
+.store .link .img{
     vertical-align: top;
     border-radius: 10px;
 }
 
-.store .element .info{
+.store .info{
     height: 140px;
     text-align: center;
 }
 
-.store .element .info .name{
+.store .info .name{
     padding: 15px 10px 5px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 
-.store .element .info .price{
+.store .info .price{
     font-weight: bold;
+}
+
+.recipe{
+    height: 1030px;
+    background-color: #b893f9;
+}
+
+.creator .bg_pivot{
+    max-width: 980px;
+}
+
+.creator .bg{
+    background-image: url(../image/section_creator.jpg);
 }
 
 .footer{
