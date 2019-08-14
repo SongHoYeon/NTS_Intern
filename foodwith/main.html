@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width==device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <title>메인 : Foodwith</title>
     <link rel="stylesheet" href="css/foodwith.css" />
@@ -10,106 +10,88 @@
 
 <body>
     <div class="wrap">
+        <div class="blind"><a href="content">본문으로 바로가기</a></div>
         <header class="header">
-            <h1 class="title">
-                <a href="#" class="link">
-                    <span class="blind">Foodwith</span>
-                </a>
-            </h1>
-            <button type="button" class="btn_menu">
-                <span class="blind">메뉴</span>
-            </button>
-            <!-- [D] 메뉴를 오픈할 시 open 클래스 추가-->
-            <ul class="menu_list">
-                <li class="item">
-                    <a href="#" class="link">About</a>
-                </li>
-                <li class="item">
-                    <a href="#" class="link">Work</a>
-                </li>
-                <li class="item">
-                    <a href="#" class="link">Contact</a>
-                </li>
-            </ul>
+            <div class="wrap_header">
+                <h1 class="title">
+                    <a href="#" class="link">
+                        <span class="blind">Foodwith</span>
+                    </a>
+                </h1>
+                <button type="button" class="btn_menu">
+                    <span class="blind">메뉴 보기</span>
+                </button>
+                <!-- [D] 메뉴를 오픈할 시 open 클래스 추가-->
+                <ul class="menu_list">
+                    <li class="item">
+                        <a href="#" class="link">About</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">Work</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </header>
-        <main>
-            <a href="#" class="link_banner">
-                <img src="./image/banner_strawberry.png" alt="딸기" class="img_banner">
-                <div class="title_banner_area">
-                    <strong class="title_banner">오븐 없이도 베이킹 가능!<br>
+        <div class="content" role="main">
+            <a href="view.html" class="link_banner">
+                <div class="wrap_banner">
+                    <img src="./image/banner_strawberry.png" alt="딸기" class="img_banner">
+                    <strong class="title_banner">오븐 없이도 베이킹 가능!
                         달콤 상큼 봄맞이 노오븐 딸기 케이크 만들기!
                     </strong>
-                </div>
-                <div class="thumbnail_area">
-                    <img src="./image/thumbnail_profile.jpg" alt="썸네일" class="img">
-                    <strong class="nickname"><span class="blind">닉네임</span>FULLMOON</strong>
+                    <div class="thumbnail_area">
+                        <div class="thumbnail_img">
+                            <img src="./image/thumbnail_profile.jpg" alt="썸네일" class="img">
+                        </div>
+                        <strong class="nickname"><span class="blind">닉네임</span>FULLMOON</strong>
+                    </div>
                 </div>
             </a>
             <div class="wrap_content">
                 <ul class="list_food">
                     <li class="item_food">
-                        <div class="item_wrap">
-                            <a href="#" class="link">
-                                <img src="./image/thumbnail_pumpkin.jpg" alt="호박" class="img">
-                                <div class="dim">
-                                    <strong class="title">따뜻 담백 호박! 든든한 호박죽으로 한끼 해결하세요</strong>
-                                </div>
-                            </a>
-                        </div>
+                        <a href="#" class="link">
+                            <img src="./image/thumbnail_pumpkin.jpg" alt="" class="img">
+                                <strong class="title">따뜻 담백 호박! 든든한 호박죽으로 한끼 해결하세요</strong>
+                        </a>
                     </li>
                     <li class="item_food">
-                        <div class="item_wrap">
-                            <a href="#" class="link">
-                                <img src="./image/thumbnail_lime.jpg" alt="호박" class="img">
-                                <div class="dim">
-                                    <strong class="title">상큼한 라임청 담기</strong>
-                                </div>
-                            </a>
-                        </div>
+                        <a href="#" class="link">
+                            <img src="./image/thumbnail_lime.jpg" alt="" class="img">
+                                <strong class="title">상큼한 라임청 담기</strong>
+                        </a>
                     </li>
                     <li class="item_food">
-                        <div class="item_wrap">
-                            <a href="#" class="link">
-                                <img src="./image/thumbnail_paprika.jpg" alt="호박" class="img">
-                                <div class="dim">
-                                    <strong class="title">아삭아삭 빨간 피망 볶음 레시피</strong>
-                                </div>
-                            </a>
-                        </div>
+                        <a href="#" class="link">
+                            <img src="./image/thumbnail_paprika.jpg" alt="" class="img">
+                                <strong class="title">아삭아삭 빨간 피망 볶음 레시피</strong>
+                        </a>
                     </li>
                     <li class="item_food">
-                        <div class="item_wrap">
-                            <a href="#" class="link">
-                                <img src="./image/thumbnail_garlic.jpg" alt="호박" class="img">
-                                <div class="dim">
-                                    <strong class="title">바삭바삭 마늘빵 만들기</strong>
-                                </div>
-                            </a>
-                        </div>
+                        <a href="#" class="link">
+                            <img src="./image/thumbnail_garlic.jpg" alt="" class="img">
+                                <strong class="title">바삭바삭 마늘빵 만들기</strong>
+                        </a>
                     </li>
                     <li class="item_food">
-                        <div class="item_wrap">
-                            <a href="#" class="link">
-                                <img src="./image/thumbnail_onion.jpg" alt="호박" class="img">
-                                <div class="dim">
-                                    <strong class="title">자색 빛깔 적양파 피클 담기</strong>
-                                </div>
-                            </a>
-                        </div>
+                        <a href="#" class="link">
+                            <img src="./image/thumbnail_onion.jpg" alt="" class="img">
+                                <strong class="title">자색 빛깔 적양파 피클 담기</strong>
+                        </a>
                     </li>
                     <li class="item_food">
-                        <div class="item_wrap">
-                            <a href="#" class="link">
-                                <img src="./image/thumbnail_avocado.jpg" alt="호박" class="img">
-                                <div class="dim">
-                                    <strong class="title">건강한 아보카도 샌드위치 만들기</strong>
-                                </div>
-                            </a>
-                        </div>
+                        <a href="#" class="link">
+                            <img src="./image/thumbnail_avocado.jpg" alt="" class="img">
+                                <strong class="title">건강한 아보카도 샌드위치 만들기</strong>
+                        </a>
                     </li>
                 </ul>
                 <button type="button" class="btn_more">
-                    <span class="text">더보기</span>
+                    <span class="blind">리스트</span>
+                    더보기
                 </button>
             </div>
             <div class="wrap_contact">
@@ -133,15 +115,16 @@
                             <span class="unit">@</span>
                             <!-- [D] open 클래스를 넣어 메일주소리스트 창을 활성화 -->
                             <div class="area_address">
-                                <div class="address_mail">
+                                <button type="button" class="address_mail">
                                     <span class="blind">주소</span>
+                                    <!-- [D] 아래 리스트에서 선택된 요소로 innerHTML 변경 -->
                                     선택하세요
-                                </div>
-                                <ul class="list_address"">
+                                </button>
+                                <ul class="list_address">
                                     <li>
-                                        <button type=" button" class="item_address">
-                                    naver.com
-                                    </button>
+                                        <button type="button" class="item_address">
+                                            naver.com
+                                        </button>
                                     </li>
                                     <li>
                                         <button type="button" class="item_address">
@@ -151,11 +134,9 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="area_message">
-                            <textarea name="message" id="contact_message" class="contact_message"
-                                placeholder="전하고 싶은 말을 100자 이내로 적어주세요." cols="20" rows="5"></textarea>
-                        </div>
-                        <button tsype="submit" class="btn_submit">
+                        <textarea id="contact_message" class="contact_message" title="메세지 입력 창" placeholder="전하고 싶은 말을 100자 이내로 적어주세요."
+                            cols="20" rows="8" maxlength="100"></textarea>
+                        <button type="submit" class="btn_submit">
                             전송하기
                         </button>
                     </div>
@@ -170,38 +151,40 @@
                     </div>
                 </div>
                 <div class="area_business">
-                    <div class="business_creators">
+                    <div class="wrap">
                         <strong class="title">Creators</strong>
-                        <a href="#" class="item_creator">푸드 크리에이터</a>
-                        <a href="#" class="item_business">푸드 비즈니스</a>
+                        <a href="#" class="item">푸드 크리에이터</a>
+                        <a href="#" class="item">푸드 비즈니스</a>
                     </div>
-                    <div class="business_partners">
+                    <div class="wrap">
                         <strong class="title">Partners</strong>
-                        <a href="#" class="item_partner">푸드 파트너</a>
-                        <a href="#" class="item_store">푸드 스토어</a>
+                        <a href="#" class="item">푸드 파트너</a>
+                        <a href="#" class="item">푸드 스토어</a>
                     </div>
                 </div>
             </div>
-        </main>
-        <footer class="footer">
-            <ul class="list_company_link">
-                <li class="element">
-                    <a href="#">회사소개</a>
-                </li>
-                <li class="element">
-                    <a href="#">인재채용</a>
-                </li>
-                <li class="element">
-                    <a href="#">이용약관</a>
-                </li>
-                <li class="element">
-                    <a href="#">고객센터</a>
-                </li>
-            </ul>
-            <div class="copyright">
-                © <strong>foodwith </strong>
-                All Right Reserved.
-            </div>
-        </footer>
-    </div>
+            </main>
+            <footer class="footer">
+                <ul class="list_company_link">
+                    <li class="element">
+                        <a href="#">회사소개</a>
+                    </li>
+                    <li class="element">
+                        <a href="#">인재채용</a>
+                    </li>
+                    <li class="element">
+                        <a href="#">이용약관</a>
+                    </li>
+                    <li class="element">
+                        <a href="#">고객센터</a>
+                    </li>
+                </ul>
+                <div class="copyright">
+                    © <strong>foodwith </strong>
+                    All Right Reserved.
+                </div>
+            </footer>
+        </div>
 </body>
+
+</html>

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width==device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <title>딸기 케이크 : Foodwith</title>
     <link rel="stylesheet" href="css/foodwith.css" />
@@ -10,75 +10,90 @@
 
 <body>
     <div class="wrap">
+        
+        <div class="blind"><a href="content">본문으로 바로가기</a></div>
         <header class="header">
-            <h1 class="title">
-                <a href="#" class="link">
-                    <span class="blind">Foodwith</span>
-                </a>
-            </h1>
-            <button type="button" class="btn_menu">
-                <span class="blind">메뉴</span>
-            </button>
-            <!-- [D] 메뉴를 오픈할 시 open 클래스 추가-->
-            <ul class="menu_list ">
-                <li class="item">
-                    <a href="#" class="link">About</a>
-                </li>
-                <li class="item">
-                    <a href="#" class="link">Work</a>
-                </li>
-                <li class="item">
-                    <a href="#" class="link">Contact</a>
-                </li>
-            </ul>
+            <div class="wrap_header">
+                <h1 class="title">
+                    <a href="#" class="link">
+                        <span class="blind">Foodwith</span>
+                    </a>
+                </h1>
+                <button type="button" class="btn_menu">
+                    <span class="blind">메뉴 보기</span>
+                </button>
+                <!-- [D] 메뉴를 오픈할 시 open 클래스 추가-->
+                <ul class="menu_list">
+                    <li class="item">
+                        <a href="#" class="link">About</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">Work</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </header>
-        <main class="wrap_recipe">
+        <div class="content wrap_recipe" role="main">
             <h2 class="title">딸기케이크</h2>
             <ul class="info_recipe">
                 <li class="element">
                     <strong class="subject">CHEF</strong>
-                    <span class="value">FULLMOON</span>
+                    <div class="wrap_value">
+                        <span class="value">FULLMOON</span>
+                    </div>
                 </li>
                 <li class="element">
                     <strong class="subject">CATEGORY</strong>
-                    <span class="value">디저트</span>
+                    <div class="wrap_value">
+                        <span class="value">디저트</span>
+                    </div>
                 </li>
                 <li class="element">
                     <strong class="subject">DATE</strong>
-                    <span class="value number">2018.02.02</span>
+                    <div class="wrap_value">
+                        <span class="value number">2018.02.02</span>
+                    </div>
                 </li>
                 <li class="element">
                     <strong class="subject">VIEW</strong>
-                    <span class="value number">2,356</span>
+                    <div class="wrap_value">
+                        <span class="value number">2,356</span>
+                    </div>
                 </li>
             </ul>
-            <dl class="recipe">
-                <dd class="subject">음식정보</dd>
-                <dt class="value">
+            <div class="recipe">
+                <h3 class="subject">음식정보</h3>
+                <p class="value">
                     딸기를 주재료로 쓴 케이크 딸기를 토핑으로 쓰거나, 딸기를 갈아서 반죽에 넣은 케이크
-                    <a href="" target="_blank" class="info_url">
+                    <a href="#" target="_blank" title="새 창" class="info_url">
+                        <span class="blind">참고 사이트</span>
                         https://terms.naver.com
                     </a>
-                </dt>
-                <dd class="subject">재료 및 분량</dd>
-                <dt class="value">
+                </p>
+                <h3 class="subject">재료 및 분량</h3>
+                <p class="value">
                     딸기, 밀가루 290g, 달걀 1개, 크림치즈 200g, 설탕 70g, 설탕 시럽, 생크림 160g, 물 100mL
-                </dt>
-                <dd class="subject">만드는 법</dd>
-                <dt class="value">
-                    <ol class="recipe_make_list">
-                        <li class="value_make">1. 밀가루, 달걀, 물을 볼에 넣고 잘 섞어준다.</li>
-                        <li class="value_make">2. 냄비에 반죽을 넣고 약한 불에서 20분간 익혀준다. 잔열로 5분간 더 익혀준다. 다 익었으면 꺼낸 뒤 한 김 식힌다.</li>
-                        <li class="value_make">3. 크림치즈 200g을 부드럽게 풀고 설탕 70g을 넣고 섞는다.</li>
-                        <li class="value_make">4. 케이크 시트를 3등분하여 1개를 밑에 깔고 설탕시럽을 바른다.</li>
-                        <li class="value_make">5. 반으로 자른 딸기를 올려준 뒤, 만들었던 치즈크림을 딸기가 덮어질 정도로 채운다.</li>
-                        <li class="value_make">6. 다시 케이크 시트를 올리고 설탕 시럽을 바른다.</li>
-                        <li class="value_make">7. 시트 위에 생크림을 얇고 평평히 발라준 뒤 크림이 굳을 수 있게 냉장실에 3시간 정도 넣어준다.</li>
-                        <li class="value_make">8. 케이크가 굳었으면 딸기를 올려 장식해준다.</li>
-                    </ol>
-                </dt>
+                </p>
+                <h3 class="subject">만드는 법</h3>
+                <ol class="recipe_make_list">
+                    <li class="value_make">1. 밀가루, 달걀, 물을 볼에 넣고 잘 섞어준다.</li>
+                    <li class="value_make">2. 냄비에 반죽을 넣고 약한 불에서 20분간 익혀준다. 잔열로 5분간 더 익혀준다. 다 익었으면 꺼낸 뒤 한 김 식힌다.</li>
+                    <li class="value_make">3. 크림치즈 200g을 부드럽게 풀고 설탕 70g을 넣고 섞는다.</li>
+                    <li class="value_make">4. 케이크 시트를 3등분하여 1개를 밑에 깔고 설탕시럽을 바른다.</li>
+                    <li class="value_make">5. 반으로 자른 딸기를 올려준 뒤, 만들었던 치즈크림을 딸기가 덮어질 정도로 채운다.</li>
+                    <li class="value_make">6. 다시 케이크 시트를 올리고 설탕 시럽을 바른다.</li>
+                    <li class="value_make">7. 시트 위에 생크림을 얇고 평평히 발라준 뒤 크림이 굳을 수 있게 냉장실에 3시간 정도 넣어준다.</li>
+                    <li class="value_make">8. 케이크가 굳었으면 딸기를 올려 장식해준다.</li>
+                </ol>
                 <table class="recipe_table">
-                    <caption><span class="blind">조리 과정 정리</span></caption>
+                    <caption><span class="blind">가열시간, 조리과정, 불조절이 포함된 표</span></caption>
+                    <colgroup>
+                        <col class="col_fix">
+                        <col span="2">
+                    </colgroup>
                     <thead>
                         <tr>
                             <th scope="col">가열시간</th>
@@ -109,30 +124,32 @@
                     <figcaption class="recipe_desc">[사진1] 밀가루, 달걀 및 재료</figcaption>
                 </figure>
                 <figure class="area_recipe_img">
-                        <img src="image/strawberry_cake.jpg" alt="" class="recipe_img">
-                        <figcaption class="recipe_desc">[사진2] 딸기 케이크 완성</figcaption>
-                    </figure>
-            </dl>
-        </main>
-        <footer class="footer">
-            <ul class="list_company_link">
-                <li class="element">
-                    <a href="#">회사소개</a>
-                </li>
-                <li class="element">
-                    <a href="#">인재채용</a>
-                </li>
-                <li class="element">
-                    <a href="#">이용약관</a>
-                </li>
-                <li class="element">
-                    <a href="#">고객센터</a>
-                </li>
-            </ul>
-            <div class="copyright">
-                © <strong>foodwith </strong>
-                All Right Reserved.
+                    <img src="image/strawberry_cake.jpg" alt="" class="recipe_img">
+                    <figcaption class="recipe_desc">[사진2] 딸기 케이크 완성</figcaption>
+                </figure>
             </div>
-        </footer>
-    </div>
+            </main>
+            <footer class="footer">
+                <ul class="list_company_link">
+                    <li class="element">
+                        <a href="#">회사소개</a>
+                    </li>
+                    <li class="element">
+                        <a href="#">인재채용</a>
+                    </li>
+                    <li class="element">
+                        <a href="#">이용약관</a>
+                    </li>
+                    <li class="element">
+                        <a href="#">고객센터</a>
+                    </li>
+                </ul>
+                <div class="copyright">
+                    © <strong>foodwith </strong>
+                    All Right Reserved.
+                </div>
+            </footer>
+        </div>
 </body>
+
+</html>
