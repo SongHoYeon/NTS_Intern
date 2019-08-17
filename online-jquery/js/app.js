@@ -1,16 +1,37 @@
 (function (window) {
 	'use strict';
 
+})(window);
+
+var TODO = function () {
+	var newTodo;
+	var todoList;
+
+	function CreateNewTodo(val) {
+		var newTodoHtml =
+			"<li>" +
+			"<div class=\"view\">" +
+			"<input class=\"toggle\" type=\"checkbox\">" +
+			"<label>{{input-value}}</label>" +
+			"<button class=\"destroy\"></button>" +
+			"</div>" +
+			"<input class=\"edit\" value={{input-value}}>" +
+			"</li>";
+		var template = Handlebars.compile(newTodoHtml);
+		console.log(todoList);
+		
+		todoList[0].insertAdjacentHTML("beforeend", template({
+			"input-value": val
+		}));
+	};
+
 	var evt_keydown = function (event) {
 		if (event.which === 13) {
-			var val = this.value;
-			var newHtml = "<li><div class=\"view\"><input class=\"toggle\" type=\"checkbox\"><label class=\"input-value\">val</label><button class=\"destroy\"></button></div><input class=\"edit\" value=\"Rule the web\"></li>";
-			var newElement = $(newHtml).appendTo(".todo-list");
-			newElement.find(".input-value").html(val).closest("li").find(".edit").attr('value', val);
+			CreateNewTodo(this.value);
 			$(this).val('');
 
-			newElement.find(".toggle").on("click", evt_toggleClick);
-			newElement.find(".destroy").on("click", evt_destroyClick);
+			// newElement.find(".toggle").on("click", evt_toggleClick);
+			// newElement.find(".destroy").on("click", evt_destroyClick);
 		}
 	};
 
@@ -25,16 +46,13 @@
 		$(this).closest("li").remove();
 	};
 
-	$("input.new-todo").on("keydown", evt_keydown);
-	$("input.toggle").on("click", evt_toggleClick);
-	$("button.destroy").on("click", evt_destroyClick);
+	function Init() {
+		newTodo = document.getElementsByClassName('new-todo');
+		todoList = document.getElementsByClassName('todo-list');
 
-})(window);
-
-var TODO = function(){
-	function Init(){
-		var newTodo = document.getElementsByClassName(".new-todo");
-		var todoList = document.getElementsByClassName(".todo-list");
+		$(newTodo).on("keydown", evt_keydown);
+		$("input.toggle").on("click", evt_toggleClick);
+		$("button.destroy").on("click", evt_destroyClick);
 	};
 
 	return {
@@ -42,9 +60,7 @@ var TODO = function(){
 	};
 }();
 
-function CreateNewLI(source){
-	var template = Handlebars.compile();
-};
-document.addEventListener("DOMContentLoaded", function(){	
+
+document.addEventListener("DOMContentLoaded", function () {
 	TODO.Init();
 });
