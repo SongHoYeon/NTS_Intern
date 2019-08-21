@@ -64,7 +64,7 @@
             <!-- </div> -->
         </header>
         <div class="container">
-            <div class="survey_wrap">
+            <div class="banner_wrap">
                 <button type="button" class="banner">
                     <img src="../img/banner.jpg" alt="" class="img">
                     <p class="blind">
@@ -81,8 +81,10 @@
             <div id="content" role="main">
                 <div class="ranking_wrap">
                     <div class="ranking_area" role="button">
+                        <!-- [D] TODO : 열리면 실시간 안열리면 실시간순위 -->
                         <h2 class="title">실시간 <span class="blind">순위</span></h2>
-                        <div class="preview_wrap close">
+                        <!-- [D] TODO : open -->
+                        <div class="preview_wrap open">
                             <div class="preview">
                                 <span class="rank">
                                     <span class="blind">위</span>
@@ -103,27 +105,120 @@
                         <span class="arrow">
                             <span class="blind">열기</span>
                         </span>
-                        <!-- TODO : js 시간되면 -->
                     </div>
+                    <!-- [D] TODO : open -->
                     <ol class="ranking_list open">
-                            <li class="element_rank first">
-                                <span class="rank">
-                                    <span class="blind">위</span>
-                                </span>
+                        <li class="element_rank first">
+                            <span class="rank">
+                                <span class="blind">위</span>
+                            </span>
+                            <div class="value_wrap">
                                 <strong class="value">
-                                    일이삼사오육칠팔구십일이삼
+                                    뱀파이어와의 비밀연애
                                 </strong>
-                                <!-- TODO : js -->
-                                <span class="offset_wrap up">
-                                    <span class="offset_flag"></span>
-                                    <span class="offset_value">20</span>
-                                    <!-- TODO : 대체텍스트 수정 -->
-                                    <span class="blind">위 상승</span>
-                                </span>
-                            </li>
-                        </ol>
+                            </div>
+                            <!-- TODO : js -->
+                            <div class="offset_wrap up">
+                                <span class="offset_flag"></span>
+                                <span class="offset_value">78</span>
+                                <!-- TODO : 대체텍스트 수정 -->
+                                <span class="blind">위 상승</span>
+                            </div>
+                        </li>
+                        <li class="element_rank second">
+                            <span class="rank">
+                                <span class="blind">위</span>
+                            </span>
+                            <div class="value_wrap">
+                                <strong class="value">
+                                    [r.p] happiness 티아라쓴 개망나니
+                                </strong>
+                            </div>
+                            <!-- TODO : js -->
+                            <div class="offset_wrap up">
+                                <span class="offset_flag"></span>
+                                <span class="offset_value">66</span>
+                                <!-- TODO : 대체텍스트 수정 -->
+                                <span class="blind">위 상승</span>
+                            </div>
+                        </li>
+                        <li class="element_rank third">
+                            <span class="rank">
+                                <span class="blind">위</span>
+                            </span>
+                            <div class="value_wrap">
+                                <strong class="value">
+                                    일이삼사오육칠팔구십일이삼사오육칠
+                                </strong>
+                            </div>
+                            <!-- TODO : js -->
+                            <div class="offset_wrap up">
+                                <span class="offset_flag"></span>
+                                <span class="offset_value">29</span>
+                                <!-- TODO : 대체텍스트 수정 -->
+                                <span class="blind">위 상승</span>
+                            </div>
+                        </li>
+                        <li class="element_rank fourth">
+                            <span class="rank">
+                                <span class="blind">위</span>
+                            </span>
+                            <div class="value_wrap">
+                                <strong class="value">
+                                    [r.p] happiness 티아라쓴 개망나니
+                                </strong>
+                            </div>
+                            <!-- TODO : js -->
+                            <div class="offset_wrap same">
+                                <span class="offset_flag"></span>
+                                <span class="offset_value">0</span>
+                                <!-- TODO : 대체텍스트 수정 -->
+                                <span class="blind">위 상승</span>
+                            </div>
+                        </li>
+                        <li class="element_rank fifth">
+                            <span class="rank">
+                                <span class="blind">위</span>
+                            </span>
+                            <div class="value_wrap">
+                                <strong class="value">
+                                    짝사랑 연대기 (over10 year)
+                                </strong>
+                            </div>
+                            <!-- TODO : js -->
+                            <div class="offset_wrap down">
+                                <span class="offset_flag"></span>
+                                <span class="offset_value">81</span>
+                                <!-- TODO : 대체텍스트 수정 -->
+                                <span class="blind">위 상승</span>
+                            </div>
+                        </li>
+                    </ol>
                 </div>
-                <div class="survey"></div>
+                <div class="survey_wrap">
+                    <ul class="sort_list">
+                        <li class="sort_element">
+                            <div role="button">
+                                랜덤
+                            </div>
+                        </li>
+                        <li class="sort_element">
+                            <button type="button">
+                                업데이트순
+                            </button>
+                        </li>
+                        <li class="sort_element">
+                            <button type="button">
+                                조회순
+                            </button>
+                        </li>
+                        <li class="sort_element select">
+                            <div role="button">
+                                관심순
+                            </div>
+                        </li>
+                    </ul>
+                </div>
                 <div class="notice"></div>
             </div>
         </div>
