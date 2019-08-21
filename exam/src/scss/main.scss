@@ -1,0 +1,237 @@
+@import './common/import';
+
+.wrap{
+    min-width: 320px;
+}
+
+.header_top{
+    border-bottom: 1px solid #ededed;
+
+    .header_title{
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0px;
+
+        .link_naver{
+            @include get_sprite($img1, 0.5);
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .link_novel{
+            @include get_sprite($img2, 0.5);
+            display: inline-block;
+            vertical-align: top;
+            margin: 13px 0 0 10px;
+        }
+
+        .line{
+            @include get_sprite($img3, 0.5);
+            display: inline-block;
+            vertical-align: top;
+            margin: 16px 0 0 10px;
+        }
+
+        .link_toon{
+            @include get_sprite($img4, 0.5);
+            display: inline-block;
+            vertical-align: top;
+            margin: 14px 0 0 6px;
+        }
+    }
+
+    .header_etc{
+        float: right;
+        margin-right: 15px;
+
+        .find{
+            @include get_sprite($img5, 0.5);
+            display: inline-block;
+            vertical-align: top;
+            margin: 14px 0 0 10px;
+        }
+        .my_page{
+            @include get_sprite($img6, 0.5);
+            display: inline-block;
+            vertical-align: top;
+            margin: 16px 0 0 6px;
+        }
+    }
+
+    &:after{
+        @include virtual_float_clear();
+    }
+}
+
+.header_menu{
+    text-align: center;
+    border-bottom: 1px solid #ededed;
+
+    .menu{
+        float: left;
+
+        .link{
+            display: block;
+            padding: 10px 5px;
+        }
+
+        .menu_title{
+            
+            padding: 0 5px 9px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+
+    .menu.home{
+        width: 15%;
+    }
+    .menu.novel{
+        width: 30%;
+    }
+    .menu.best{
+        width: 27.5%;
+    }
+    .menu.challenge{
+        width: 27.5%;
+    }
+
+    &:after{
+        @include virtual_float_clear();
+    }
+
+    .menu.select{
+        .link{
+            color: #35c1f9;
+        }
+
+        .menu_title{
+            border-bottom: 2px solid #35c1f9;
+        }
+    }
+}
+
+.survey_wrap{
+    background-color: #27203a;
+    
+    .banner{
+        display: block;
+        max-width: 640px;
+        margin: 0 auto;
+        .img{
+            vertical-align: top;
+            width: 100%;
+        }
+    }
+}
+
+.ranking_wrap{
+    background-color: #fff;
+    border-bottom: 1px solid #ededed;
+}
+.ranking_area{
+    position: relative;
+    padding: 0 15px;
+
+    .title{
+        font-size: 13px;
+        line-height: 40px;
+        color: #000;
+        float: left;
+    }
+
+    .preview_wrap{
+        display: block;
+        padding: 0 60px 0 30px;
+        overflow: hidden;
+    }
+
+    .preview_wrap.close{
+        display: none;
+    }
+
+    .preview{
+        position: relative;
+
+        .rank{
+            @include get_sprite($img13, 0.5);
+            position: absolute;
+            top: 14px;
+            left: -17px;
+        }
+    
+        .value{
+            font-weight: normal;
+            display: inline-block;
+            vertical-align: top;
+            max-width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            line-height: 40px;
+        }
+    
+        .offset_wrap{
+            position: absolute;
+            top: 0;
+            right: -30px;
+            .offset_flag{
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 16px;
+            }
+
+            .offset_value{
+                line-height: 40px;
+            }
+        }
+
+        .offset_wrap.up{
+            .offset_flag{
+                @include get_sprite($img14, 0.5);
+            }
+        }
+
+        .offset_wrap.down{
+            .offset_flag{
+                @include get_sprite($img16, 0.5);
+            }
+        }
+
+        .offset_wrap.same{
+            .offset_flag{
+                @include get_sprite($img15, 0.5);
+            }
+        }
+    }
+
+    .arrow{
+        position: absolute;
+        top: 17px;
+        right: 15px;
+        @include get_sprite($img8, 0.5);
+    }
+
+    &::after{
+        @include virtual_float_clear();
+    }
+
+    .ranking_list{
+        display: none;
+    }
+
+    .ranking_list.open{
+        display: block;
+
+        &::after{
+            @include virtual_float_clear();
+        }
+    }
+
+    .element_rank{
+        float: left;
+        position: relative;
+        padding: 10px 0;
+        // border;
+    }
+}

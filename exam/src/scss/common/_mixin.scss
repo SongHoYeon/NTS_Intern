@@ -1,0 +1,29 @@
+@import '../sprite';
+@import './function';
+
+@function multiply($val1, $val2){
+    @return $val1 * $val2;
+}
+
+@mixin get_sprite($sprite, $size : 1, $repeat: no-repeat) {
+    @include sprite($sprite);
+    $result_W: multiply(nth($sprite, 5), $size);
+    $result_H: multiply(nth($sprite, 6), $size);
+    $result_pX: multiply(nth($sprite, 3), $size);
+    $result_pY: multiply(nth($sprite, 4), $size);
+    $result_sX: multiply($spritesheet-width, $size);
+    $result_sY: multiply($spritesheet-height, $size);
+
+    background-position: $result_pX $result_pY;
+    background-size: $result_sX $result_sY;
+    width: $result_W;
+    height: $result_H;
+
+    background-repeat: $repeat;
+}
+
+@mixin virtual_float_clear{
+    content: '';
+    display: block;
+    clear: both;
+}

@@ -1,0 +1,44 @@
+body, h1, h2, h3, button, ul, li,
+input, textarea, dl, dt, dd, ol, figure, p
+{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    color: #333;
+}
+
+button{
+    cursor: pointer;
+    border: 0;
+}
+
+// input, button{
+//     border: 0;
+// }
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+// img{
+//     vertical-align: top;
+// }
+
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+}
