@@ -603,8 +603,167 @@
     }
 }
 
-@media screen and (min-width: 768px){
+.customer_info_popup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
+    &.open{
+        display: block;
+    }
+
+    .popup_layer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 300px;
+        height: 450px;
+        margin: auto; 
+        z-index: 10;
+        background: url(../../img/layer_bg.jpg) no-repeat 0 0;
+        background-size: 300px 450px;
+        border-radius: 5%;
+
+        .title{
+            margin-top: 15px;
+            font-size: 33px;
+            line-height: 36px;
+            color: #2f2f2f;
+            display: block;
+            text-align: center;
+        }
+
+        .desc{
+            margin-top: 10px;
+            font-size: 11px;
+            line-height: 18px;
+            color: #2f2f2f;
+            text-align: center;
+        }
+
+        .form_inner{
+            padding: 0 20px;
+        }
+
+        .close_btn{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 15px;
+            &::before{
+                content: '';
+                @include get_sprite($img21, 0.5);
+                @include in_bl_top();
+            }
+        }
+    }
+
+    .info_list{
+        margin-top: 10px;
+
+        .element{
+            float: left;
+            width: 100%;
+            font-size: 13px;
+
+            .input_title{
+                display: block;
+                color: #2f2f2f;    
+            }
+
+            .input_form{
+                margin-top: 3px;
+                border: 1px solid #b4b4b4;
+                padding: 5px 15px;
+                border-radius: 30px;
+            }
+
+            .input_value{
+                width: 100%;
+                color: #bbb;
+                
+            }
+            
+            & + .element{
+                margin-top: 5px;
+            }
+        }
+
+        &::after{
+            @include virtual_float_clear();
+        }
+    }
+
+    .check_list{
+        margin-top: 15px;
+        font-size: 11px;
+        line-height: 18px;
+        .check_area{
+            // TODO : 푸드위드에서 들여쓰기 확인하기. 앱솔안쓰게
+            position: relative;
+
+            & + .check_area{
+                margin-top: 5px;
+            }
+
+            .check_icon{
+                // @include in_bl_top();
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                &.check{
+                    @include get_sprite($img22, 0.5);
+                }
+
+                &.uncheck{
+                    @include get_sprite($img22, 0.5);
+                }
+            }
+            
+            .check_desc{
+                @include in_bl_top();
+                margin: 2px 0 0 10px;
+                padding-left: 19px;
+                
+                .agree{
+                    color: #2f2f2f;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .btn_wrap{
+        text-align: center;
+        margin-top: 10px;
+
+        .submit_btn{
+            font-size: 25px;
+            background-color: #000;
+            color: #fff;
+            width: 180px;
+            line-height: 40px;
+            border-radius: 30px;
+        }
+    }
+
+    .popup_dimmed{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+@media screen and (min-width: 768px){
     .survey_element_random{
         width: 233px;
     }

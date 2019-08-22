@@ -1,10 +1,10 @@
 @charset "UTF-8";
-body, h1, h2, h3, button, ul, li,
-input, textarea, dl, dt, dd, ol, figure, p {
+body, h1, h2, button, ul, li,
+input ol, p {
   margin: 0;
   padding: 0; }
 
-body {
+body, input {
   font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
   font-size: 14px;
   line-height: 16px;
@@ -13,7 +13,12 @@ body {
 button {
   cursor: pointer;
   background-color: transparent;
-  border: none; }
+  border: none;
+  text-align: inherit; }
+
+input {
+  border: none;
+  background-color: transparent; }
 
 a {
   text-decoration: none;
@@ -578,6 +583,133 @@ ul, ol {
         left: 13px; }
       .ranking_list .element_rank .subject_wrap {
         margin-left: 10px; } }
+
+.customer_info_popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+  .customer_info_popup.open {
+    display: block; }
+  .customer_info_popup .popup_layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: 450px;
+    margin: auto;
+    z-index: 10;
+    background: url(../../img/layer_bg.jpg) no-repeat 0 0;
+    background-size: 300px 450px;
+    border-radius: 5%; }
+    .customer_info_popup .popup_layer .title {
+      margin-top: 15px;
+      font-size: 33px;
+      line-height: 36px;
+      color: #2f2f2f;
+      display: block;
+      text-align: center; }
+    .customer_info_popup .popup_layer .desc {
+      margin-top: 10px;
+      font-size: 11px;
+      line-height: 18px;
+      color: #2f2f2f;
+      text-align: center; }
+    .customer_info_popup .popup_layer .form_inner {
+      padding: 0 20px; }
+    .customer_info_popup .popup_layer .close_btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 15px; }
+      .customer_info_popup .popup_layer .close_btn::before {
+        content: '';
+        background-image: url(../../../img/sprite.png);
+        background-position: -54px -65px;
+        background-size: 104px 89.5px;
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        vertical-align: top; }
+  .customer_info_popup .info_list {
+    margin-top: 10px; }
+    .customer_info_popup .info_list .element {
+      float: left;
+      width: 100%;
+      font-size: 13px; }
+      .customer_info_popup .info_list .element .input_title {
+        display: block;
+        color: #2f2f2f; }
+      .customer_info_popup .info_list .element .input_form {
+        margin-top: 3px;
+        border: 1px solid #b4b4b4;
+        padding: 5px 15px;
+        border-radius: 30px; }
+      .customer_info_popup .info_list .element .input_value {
+        width: 100%;
+        color: #bbb; }
+      .customer_info_popup .info_list .element + .element {
+        margin-top: 5px; }
+    .customer_info_popup .info_list::after {
+      content: '';
+      display: block;
+      clear: both; }
+  .customer_info_popup .check_list {
+    margin-top: 15px;
+    font-size: 11px;
+    line-height: 18px; }
+    .customer_info_popup .check_list .check_area {
+      position: relative; }
+      .customer_info_popup .check_list .check_area + .check_area {
+        margin-top: 5px; }
+      .customer_info_popup .check_list .check_area .check_icon {
+        position: absolute;
+        top: 0;
+        left: 0; }
+        .customer_info_popup .check_list .check_area .check_icon.check {
+          background-image: url(../../../img/sprite.png);
+          background-position: 0px -65px;
+          background-size: 104px 89.5px;
+          width: 18px;
+          height: 18px;
+          background-repeat: no-repeat; }
+        .customer_info_popup .check_list .check_area .check_icon.uncheck {
+          background-image: url(../../../img/sprite.png);
+          background-position: 0px -65px;
+          background-size: 104px 89.5px;
+          width: 18px;
+          height: 18px;
+          background-repeat: no-repeat; }
+      .customer_info_popup .check_list .check_area .check_desc {
+        display: inline-block;
+        vertical-align: top;
+        margin: 2px 0 0 10px;
+        padding-left: 19px; }
+        .customer_info_popup .check_list .check_area .check_desc .agree {
+          color: #2f2f2f;
+          text-decoration: underline; }
+  .customer_info_popup .btn_wrap {
+    text-align: center;
+    margin-top: 10px; }
+    .customer_info_popup .btn_wrap .submit_btn {
+      font-size: 25px;
+      background-color: #000;
+      color: #fff;
+      width: 180px;
+      line-height: 40px;
+      border-radius: 30px; }
+  .customer_info_popup .popup_dimmed {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7); }
 
 @media screen and (min-width: 768px) {
   .survey_element_random {

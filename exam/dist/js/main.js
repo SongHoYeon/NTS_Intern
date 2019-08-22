@@ -1,0 +1,1 @@
+var novelPageListener=function(){var e;function n(e){$(this).closest(".menu").addClass("select"),console.log($(this).closest(".menu"))}return{Init:function(){e=document.getElementsByClassName("header_menu"),$(e).on("click",n)}}}();$(document).ready(function(){novelPageListener.Init()});

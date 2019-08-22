@@ -1,11 +1,11 @@
-body, h1, h2, h3, button, ul, li,
-input, textarea, dl, dt, dd, ol, figure, p
+body, h1, h2, button, ul, li,
+input ol, p
 {
     margin: 0;
     padding: 0;
 }
 
-body{
+body, input{
     font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
     font-size: 14px;
     line-height: 16px;
@@ -16,11 +16,13 @@ button{
     cursor: pointer;
     background-color: transparent;
     border: none;
+    text-align: inherit;
 }
 
-// input, button{
-//     border: 0;
-// }
+input{
+    border: none;
+    background-color: transparent;
+}
 
 a{
     text-decoration: none;
@@ -30,10 +32,6 @@ a{
 ul, ol{
     list-style: none;
 }
-
-// img{
-//     vertical-align: top;
-// }
 
 .blind{
     position: absolute;
