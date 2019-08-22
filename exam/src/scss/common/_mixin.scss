@@ -27,3 +27,8 @@
     display: block;
     clear: both;
 }
+
+@mixin in_bl_top {
+    display: inline-block;
+    vertical-align: top;
+}

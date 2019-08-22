@@ -8,12 +8,14 @@ input, textarea, dl, dt, dd, ol, figure, p
 body{
     font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
     font-size: 14px;
-    line-height: 14px;
-    color: #333;
+    line-height: 16px;
+    color: #000;
 }
 
 button{
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 
 // input, button{
@@ -22,7 +24,7 @@ button{
 
 a{
     text-decoration: none;
-    color: #333;
+    color: #000;
 }
 
 ul, ol{
