@@ -110,7 +110,6 @@
     background-color: #27203a;
     
     .banner{
-        display: block;
         max-width: 640px;
         margin: 0 auto;
 
@@ -121,16 +120,32 @@
     }
 }
 
-.content{
-
-}
-
 .ranking_wrap{
     background-color: #fff;
     border-bottom: 1px solid #e1e1e1;
-    padding: 0 15px;
     max-width: 922px;
     margin: 0 auto;
+    padding: 0 15px;
+
+    .rank.rank_1{
+        @include get_sprite($img9, 0.5);
+    }
+
+    .rank.rank_2{
+        @include get_sprite($img10, 0.5);
+    }
+
+    .rank.rank_3{
+        @include get_sprite($img11, 0.5);
+    }
+
+    .rank.rank_4{
+        @include get_sprite($img12, 0.5);
+    }
+
+    .rank.rank_5{
+        @include get_sprite($img13, 0.5);
+    }
 }
 
 .ranking_area{
@@ -153,9 +168,8 @@
         }
 
         .rank{
-            @include get_sprite($img13, 0.5);
             position: absolute;
-            top: 15px;
+            top: 14px;
             left: 14px;
         }
     
@@ -166,6 +180,7 @@
             text-overflow: ellipsis;
             overflow: hidden;
             line-height: 40px;
+            color: #333;
 
             &:hover, &:focus{
                 text-decoration: underline;
@@ -197,13 +212,14 @@
 
             &.same{
                 .offset_flag{
+                    margin-top: 18px;
                     @include get_sprite($img15, 0.5);
                 }
             }
 
             .offset_value{
                 @include in_bl_top();
-                margin: 14px 0 0 5px;
+                margin: 12px 0 0 5px;
                 font-size: 13px;
                 color: #888;
                 width: 16px;
@@ -213,15 +229,19 @@
         }
     }
 
+    &::after{
+        @include virtual_float_clear();
+    }
+
     .arrow{
         position: absolute;
         top: 18px;
         right: 0;
-        @include get_sprite($img8, 0.5);
-    }
-
-    &::after{
-        @include virtual_float_clear();
+        background-size: 14px 7px;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        width: 14px;
+        height: 7px;
     }
 }
 
@@ -240,9 +260,13 @@
 .element_rank{
     float: left;
     position: relative;
-    padding: 10px 0;
     width: 100%;
-    border-top: 1px solid #f5f4f5;
+
+    .element_inner{
+        padding: 10px 0;
+        border-collapse: collapse;
+        border-top: 1px solid #f5f4f5;
+    }
 
     .rank{
         position: absolute;
@@ -258,6 +282,7 @@
             text-overflow: ellipsis;
             overflow: hidden;
             display: block;
+            color: #333;
 
             &:hover, &:focus{
                 text-decoration: underline;
@@ -290,6 +315,7 @@
 
         &.same{
             .offset_flag{
+                margin-top: 17px;
                 @include get_sprite($img15, 0.5);
             }
         }
@@ -302,36 +328,6 @@
             width: 16px;
             overflow: hidden;
             text-align: right;
-        }
-    }
-
-    &.first{
-        .rank{
-            @include get_sprite($img9, 0.5);
-        }
-    }
-
-    &.second{
-        .rank{
-            @include get_sprite($img10, 0.5);
-        }
-    }
-
-    &.third{
-        .rank{
-            @include get_sprite($img11, 0.5);
-        }
-    }
-
-    &.fourth{
-        .rank{
-            @include get_sprite($img12, 0.5);
-        }
-    }
-
-    &.fifth{
-        .rank{
-            @include get_sprite($img13, 0.5);
         }
     }
 }
@@ -354,6 +350,7 @@
         position: absolute;
         top: -20px;
         right: 15px;
+        padding-left: 20px;
 
         &::after{
             @include virtual_float_clear();
@@ -372,15 +369,18 @@
                 position: absolute;
                 top: 6px;
                 left: -10px;
-                @include get_sprite($img20,0.5);
+                @include get_sprite($img20, 0.5);
             }
         }
 
         &.select{
-            font-weight: bold;
-
+            .btn{
+                font-weight: bold;
+                color: #000;
+            }
             &::before{
                 content: '';
+                position: absolute;
                 top: 4px;
                 left: -12px;
                 @include get_sprite($img19, 0.5);
@@ -437,6 +437,7 @@
             color: #00abe1;
             padding: 5px 0;
             width: 100%;
+            text-align: center;
 
             &::before{
                 content: '';
@@ -455,13 +456,17 @@
         }
     }
 
-    .id{
+    .category{
         margin-top: 10px;
         .thumbnail{
-            @include get_sprite($thumb, 0.5);
+            float: left;
+            background-size: 25px 25px;
+            background-position: 0 0;
+            width: 25px;
+            height: 25px;
             border-radius: 50%;
-            @include in_bl_top();
             position: relative;
+            margin-right: 5px;
 
             &::before{
                 content: ''; 
@@ -474,10 +479,12 @@
                 border-radius: 50%;
             }
         }
+        &::after{
+            @include virtual_float_clear();
+        }
 
         .text{
-            @include in_bl_top();
-            margin-left: 5px;
+            overflow: hidden;
             font-size: 11px;
             line-height: 25px;
             color: #666;
@@ -492,7 +499,6 @@
         text-overflow: ellipsis;
         -webkit-line-clamp:2;
         font-size: 12px;
-        line-height: 16px;
         max-height: 32px;
         margin-top: 5px;
     }
@@ -563,7 +569,6 @@
         right: 0;
         padding: 10px 15px 5px;
 
-
         &::before{
             content: '';
             position: absolute;
@@ -586,21 +591,6 @@
     text-align: center;
     padding: 30px 0;
     font-size: 12px;
-}
-
-@media screen and (min-width: 768px){
-    .ranking_list{
-        margin-left: -10px;
-        .element_rank{
-            width: 50%;
-            .rank{
-                left: 13px;
-            }
-            .subject_wrap{
-                margin-left: 10px;
-            }
-        }
-    }
 }
 
 .customer_info_popup{
@@ -686,7 +676,7 @@
             .input_value{
                 width: 100%;
                 color: #bbb;
-                
+                font-size: 13px;
             }
             
             & + .element{
@@ -703,8 +693,8 @@
         margin-top: 15px;
         font-size: 11px;
         line-height: 18px;
+
         .check_area{
-            // TODO : 푸드위드에서 들여쓰기 확인하기. 앱솔안쓰게
             position: relative;
 
             & + .check_area{
@@ -712,13 +702,12 @@
             }
 
             .check_icon{
-                // @include in_bl_top();
                 position: absolute;
                 top: 0;
                 left: 0;
 
                 &.check{
-                    @include get_sprite($img22, 0.5);
+                    @include get_sprite($img23, 0.5);
                 }
 
                 &.uncheck{
@@ -728,8 +717,7 @@
             
             .check_desc{
                 @include in_bl_top();
-                margin: 2px 0 0 10px;
-                padding-left: 19px;
+                margin: 2px 0 0 25px;
                 
                 .agree{
                     color: #2f2f2f;
@@ -764,6 +752,33 @@
 }
 
 @media screen and (min-width: 768px){
+    .header_menu{
+        .menu{
+            .menu_title{
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .ranking_wrap{
+        padding: 0;
+    }
+
+    .ranking_list{
+
+        margin-left: -10px;
+        .element_rank{
+            width: 50%;
+            .rank{
+                left: 13px;
+            }
+            .element_inner{
+                margin-left: 10px;
+            }
+        }
+    }
+
     .survey_element_random{
         width: 233px;
     }
@@ -791,14 +806,16 @@
             }
         }
 
-        .id{
+        .category{
             margin-top: 20px;
             .thumbnail{
-                @include get_sprite($thumb, 0.75);
+                background-size: 40px 40px;
+                background-position: 0 0;
+                width: 40px;
+                height: 40px;
             }
     
             .text{
-                margin-left: 10px;
                 font-size: 18px;
                 line-height: 37.5px;
             }
@@ -812,7 +829,7 @@
         }
     
         .total{
-            margin-top: 15px;
+            margin-top: 10px;
             font-size: 16px;
             line-height: 18px;
     
@@ -824,7 +841,98 @@
             font-size: 16px;
             line-height: 18px;
             max-height: 36px;
+            margin-top: 30px;
+        }
+    }
+
+    .customer_info_popup{    
+        .popup_layer {
+            width: 500px;
+            height: 750px;
+            background-size: 500px 750px;
+    
+            .title{
+                margin-top: 35px;
+                font-size: 50px;
+                line-height: 60px;
+            }
+    
+            .desc{
+                margin-top: 20px;
+                font-size: 20px;
+                line-height: 25px;
+            }
+    
+            .form_inner{
+                padding: 0 30px;
+            }
+    
+            .close_btn{
+                padding: 25px;
+
+                &::before{
+                    @include get_sprite($img21, 0.75);
+                }
+            }
+        }
+    
+        .info_list{
+            margin-top: 20px;
+    
+            .element{
+                font-size: 20px;
+                line-height: 25px;
+    
+                .input_form{
+                    margin-top: 5px;
+                    padding: 10px 20px;
+                }
+                
+                .input_value{
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+                
+                & + .element{
+                    margin-top: 7px;
+                }
+            }
+        }
+    
+        .check_list{
+            margin-top: 20px;
+            font-size: 20px;
+            line-height: 25px;
+
+            .check_area{
+                & + .check_area{
+                    margin-top: 10px;
+                }
+
+                .check_icon{    
+                    &.check{
+                        @include get_sprite($img23, 0.75);
+                    }
+    
+                    &.uncheck{
+                        @include get_sprite($img22, 0.75);
+                    }
+                }
+                
+                .check_desc{
+                    margin: 2px 0 0 35px;
+                }
+            }
+        }
+    
+        .btn_wrap{
             margin-top: 15px;
+    
+            .submit_btn{
+                font-size: 30px;
+                width: 280px;
+                line-height: 60px;
+            }
         }
     }
 }
